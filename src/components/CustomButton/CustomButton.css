@@ -1,0 +1,29 @@
+.main {
+    margin: 10px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.hint {
+    position: absolute;
+    right: 200px;
+    top: -50px;
+    font-style: italic;
+}
+
+.button {
+    width: 200px;
+    height: 40px;
+    border: 1px solid lightgreen;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.send {
+    background-color: lightgreen;
+}
+
+.sent {
+    background-color: red;
+}

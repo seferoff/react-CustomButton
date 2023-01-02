@@ -6,7 +6,7 @@ class CustomButton extends Component {
     info: "The secret info",
     text: "Send",
     warnMessage: "Siz melumatlari localStorage-e gonderdiniz.",
-    hint: "",
+    hint: "Eger buttona click etseniz melumatlar localStorage",
   };
 
   handleClick = () => {
@@ -22,19 +22,6 @@ class CustomButton extends Component {
     }
   };
 
-  showHint = () => {
-    if (this.state.text === "Send") {
-        this.setState({hint: "Eger buttona click etseniz melumatlar localStorage-e gonderilecek."})
-    }
-    else {
-        this.setState({hint: "Eger buttona click etseniz melumatlar localStorage-den silinecek."})
-    }
-  };
-
-  removeHint = () => {
-    this.setState({hint: ""})
-  }
-
   render() {
     const { text, hint} = this.state;
     let className = "send button";
@@ -48,15 +35,11 @@ class CustomButton extends Component {
 
     return (
       <div className="main">
-        <div className="hint">
-          {hint}
-        </div>
         <button
           className={className}
-          type="button"
-          onMouseOver={this.showHint}
+          style={{backgroundColor:this.props.backgroundColor}}
+          title={`${hint} ${text === "Send"?'-e gonderilecek':'-den silinecek'}.`}
           onClick={this.handleClick}
-          onMouseOut={this.removeHint}
         >
           {text}
         </button>

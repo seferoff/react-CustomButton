@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <CustomButton/>
-      <CustomButton/>
-      <CustomButton/>
+      <CustomButton backgroundColor='yellow'/>
+      <CustomButton backgroundColor='blue'/>
     </div>
   );
 }
